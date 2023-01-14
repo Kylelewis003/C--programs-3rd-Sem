@@ -22,7 +22,7 @@ void insert()
     scanf("%d",&pos);
     if(pos<0||pos>n)
     {
-        printf("Invalid Input\n");
+        printf("\nInvalid Input\n");
         return ;
     }
     else
@@ -42,7 +42,7 @@ void delete()
     scanf("%d",&pos);
     if(pos<0||pos>n)
     {
-        printf("Invalid input\n");
+        printf("\nInvalid input\n");
         return ;
     }
     else
