@@ -27,9 +27,7 @@ void delete_front()
         printf("\nStack Underflow\n");
         return;
     }
-
     NODE *temp;
-
     temp = first;
     printf("\n%d is popped from stack\n",temp->info);
     first = first -> next;

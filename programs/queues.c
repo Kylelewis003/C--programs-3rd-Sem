@@ -2,7 +2,7 @@
 #define size 4
 int i;
 int f = -1 , r = -1;
-int q[50];
+int q[20];
 
 void insert()
 {

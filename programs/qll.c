@@ -44,9 +44,7 @@ void delete_front()
         printf("\nQueue Underflow\n");
         return;
     }
-
     NODE *temp;
-
     temp = first;
     printf("\n%s information is deleted\n",temp->name);
     first = first -> next;

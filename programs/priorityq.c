@@ -1,5 +1,5 @@
 #include<stdio.h>
-#define size 3
+#define size 5
 int f = -1  , r = -1;
 int q[size];
 

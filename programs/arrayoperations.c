@@ -1,5 +1,5 @@
 #include<stdio.h>
-int a[10] , n;
+int a[5] , n;
 
 void create()
 {

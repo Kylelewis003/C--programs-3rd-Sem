@@ -49,9 +49,7 @@ void delete_front()
         printf("\nList Empty\n");
         return;
     }
-
     NODE *temp;
-
     temp = first;
     printf("\n%d is deleted\n",temp->info);
     first = first -> next;

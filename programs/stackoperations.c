@@ -1,5 +1,5 @@
 #include<stdio.h>
-#define max 3
+#define max 4
 int i , a[max] , top = -1 , ele;
 
 void push()

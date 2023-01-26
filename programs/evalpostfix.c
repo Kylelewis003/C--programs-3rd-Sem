@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<math.h>
 int i , top = -1;
-int op1 , op2 , res , s[50];
+int op1 , op2 , res , s[20];
 char postfix[50] , sym;
 
 void push(int item)
