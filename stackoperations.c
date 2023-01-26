@@ -13,8 +13,7 @@ void push()
     {
         printf("\nEnter the element to be inserted : ");
         scanf("%d",&ele);
-        top++;
-        a[top] = ele;
+        a[++top] = ele;
     }
     printf("\nElement %d has been pushed into stack\n",ele);
 }
