@@ -57,11 +57,12 @@ void display()
 void search()  
 {  
     NODE *temp;  
-    int item,i=0,flag = 0;  
+    int item,i,flag = 0;  
     temp = first;   
     if(temp == NULL)  
     {  
         printf("\nEmpty List\n");  
+        return;
     }  
     else  
     {   

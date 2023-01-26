@@ -1,33 +1,27 @@
 #include<stdio.h>
 
 struct node{
-    int info;
+    char name[100];
+    char usn[20];
+    int m;
     struct node * next;
 };
 typedef struct node NODE;
 NODE * first = NULL;
 
-void insert_front()
-{
-    int data;
-    NODE *new;
-    new = malloc(sizeof(NODE));
-    printf("\nEnter data : ");
-    scanf("%d",&data);
-    new -> info = data;
-    new -> next  = first;
-    first = new;
-}
-
 void insert_end()
 {
-    int data;
     NODE *new , *temp;
     new = malloc(sizeof(NODE));
-    printf("\nEnter data :");
-    scanf("%d",&data);
-    new -> info = data;
-    new -> next  = NULL;
+    printf("\nEnter Student information :\n");
+    printf("\nEnter Student name :");
+    scanf("%s",new->name);
+    printf("\nEnter Student usn :");
+    scanf("%s",new->usn);
+    printf("\nEnter Student marks :");
+    scanf("%d",&new->m);
+
+    new -> next = NULL;
 
     if(first == NULL)
     {
@@ -40,20 +34,21 @@ void insert_end()
         temp = temp->next;
     }
     temp->next = new;
+    printf("\nStudent %s information has been inserted\n",new->name);
 }
 
 void delete_front()
 {
     if(first == NULL)
     {
-        printf("\nList Empty\n");
+        printf("\nQueue Underflow\n");
         return;
     }
 
     NODE *temp;
 
     temp = first;
-    printf("\n%d is deleted\n",temp->info);
+    printf("\n%s information is deleted\n",temp->name);
     first = first -> next;
     free(temp);
 }
@@ -63,13 +58,15 @@ void display()
     NODE *temp;
     if(first == NULL)
     {
-        printf("\nList empty\n");
+        printf("\nQueue empty\n");
         return;
     }
     temp = first;
+    printf("\nStudent information is : \n");
+    printf("Name\tUSN\tMarks\n");
     while(temp != NULL)
     {
-        printf("%d ",temp->info);
+        printf("%s\t%s\t%d\n",temp->name,temp->usn,temp->m);
         temp = temp -> next;
     }
     printf("\n");
@@ -79,30 +76,27 @@ int main()
 {
     while(1)
     {
-         int ch;
+        int ch;
         printf("\n*******MENU*******");
-        printf("\n1.Insert Front Function");
-        printf("\n2.Insert End Function");
-        printf("\n3.Delete Front Function");
-        printf("\n4.Display Function");
-        printf("\n5.Exit");
+        printf("\n1.Inqueue Operation");
+        printf("\n2.Dequeue Operation");
+        printf("\n3.Display Function");
+        printf("\n4.Exit");
         printf("\nEnter your choice : ");
         scanf("%d",&ch);
         switch(ch)
         {
-            case 1 : insert_front();
+            case 1 : insert_end();
                     break;
-            case 2 : insert_end();
+            case 2 : delete_front();
                     break;
-            case 3 : delete_front();
+            case 3 : display();
                     break;
-            case 4 : display();
-                    break;
-            case 5 : exit(1);
+            case 4 : exit(1);
 
             default :
                     printf("\nEnter a valid input\n");
         }
     
     }
-}
+}   
