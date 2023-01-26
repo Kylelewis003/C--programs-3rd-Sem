@@ -75,6 +75,6 @@ void main()
         insert_front();
     }
 
-    res = concat(first , sec);
+    res = concat(first,sec);
     display(res);
 }
