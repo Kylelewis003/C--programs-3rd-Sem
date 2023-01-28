@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 struct node{
     int info;
@@ -8,16 +9,28 @@ typedef struct node NODE;
 NODE * first = NULL;
 NODE * sec = NULL;
 
-void insert_front()
+
+void insert_end()
 {
     int data;
-    NODE *new;
+    NODE *new , *temp;
     new = malloc(sizeof(NODE));
-    printf("\nEnter data : ");
+    printf("\nEnter data :");
     scanf("%d",&data);
     new -> info = data;
-    new -> next  = first;
-    first = new;
+    new -> next  = NULL;
+
+    if(first == NULL)
+    {
+        first = new;
+        return;
+    }
+    temp = first;
+    while(temp->next!=NULL)
+    {
+        temp = temp->next;
+    }
+    temp->next = new;
 }
 
 void display()
@@ -29,6 +42,7 @@ void display()
         return;
     }
     temp = first;
+    printf("\nThe Concatenated list is : \n");
     while(temp != NULL)
     {
         printf("%d ",temp->info);
@@ -67,12 +81,12 @@ void main()
     printf("Enter data for list1 :\n");
     for(i = 0 ; i<m ; i++)
     {
-        insert_front();
+        insert_end();
     }
     printf("\nEnter data for list2 : \n");
     for(i = 0 ; i<n ; i++)
     {
-        insert_front();
+        insert_end();
     }
     res = concat(first,sec);
     display(res);
