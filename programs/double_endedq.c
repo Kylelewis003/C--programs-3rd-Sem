@@ -105,7 +105,7 @@ int main()
     int ch;
     while(1)
     {
-        printf("\nQUEUE OPERATOINS");
+        printf("\nDOUBLE ENDED QUEUE OPERATOINS");
         printf("\n1.Insert from rear end");
         printf("\n2.Insert from front end");
         printf("\n3.Delete from front end");

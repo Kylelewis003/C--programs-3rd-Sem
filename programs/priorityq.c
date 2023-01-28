@@ -2,7 +2,6 @@
 #define size 5
 int f = -1  , r = -1;
 int q[size];
-
 void insert()
 {
     int j , ele;
@@ -25,7 +24,9 @@ void insert()
     }
     q[j+1] = ele;
     r++;
+    printf("\nElement %d has been inserted into queue\n",ele);
 }
+
 void delete()
 {
     if(f>r||f ==-1)
@@ -35,7 +36,7 @@ void delete()
     }
     else
     {
-        printf("%d is deleted from queue\n",q[f]);
+        printf("\nElement %d has been deleted from queue\n",q[f]);
         f+=1;
     }
 }

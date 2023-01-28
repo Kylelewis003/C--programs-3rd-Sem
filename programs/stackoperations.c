@@ -56,7 +56,7 @@ int main()
     while(1)
     {
         int ch;
-        printf("\n*******MENU*******");
+        printf("\nSTACK OPERATIONS");
         printf("\n1.Push Operation");
         printf("\n2.Pop Operation");
         printf("\n3.Dispalying Stack");

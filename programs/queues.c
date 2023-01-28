@@ -22,6 +22,7 @@ void insert()
         printf("Enter element to be inserted \n");
         scanf("%d",&ele);
         q[r] = ele;
+        printf("\nElement %d has been inserted into queue\n",ele);
     }
 }
 void delete()
@@ -33,7 +34,7 @@ void delete()
     }
     else
     {
-        printf("%d is deleted from queue\n",q[f]);
+        printf("\nElement %d has been deleted form queue\n",q[f]);
         f+=1;
     }
 }
@@ -47,11 +48,14 @@ void display()
     }
     else
     {
+        printf("\nQueue Contents are : \n")
         for(i = f  ;i<=r ; i++)
         {
             printf("%d ",q[i]);
         }
+        printf("\n");
     }
+
 }
 int main()
 {
