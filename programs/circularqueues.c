@@ -1,5 +1,4 @@
 #include<stdio.h>
-
 #define max 5
 int q[max] , f = -1 , r = -1;
 
@@ -73,9 +72,9 @@ void main()
     int ch;
     while(1)
     {
-        printf("\n CIRCULAR QUEUE OPERATOINS\n");
-        printf("\n1.Insert from rear end");
-        printf("\n2.Delete from front end");
+        printf("\nCIRCULAR QUEUE OPERATOINS");
+        printf("\n1.Insert function");
+        printf("\n2.Delete function");
         printf("\n3.Display");
         printf("\n4.Exit");
         printf("\nEnter a choice : \n");
